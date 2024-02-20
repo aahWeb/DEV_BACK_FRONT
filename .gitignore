@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+OLD/
+vendor/
+supports_dev2/SF/SF_mongo/MongoDocker/data/

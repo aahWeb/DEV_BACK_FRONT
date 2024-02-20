@@ -1,0 +1,124 @@
+[
+    {
+        "name": "Fondant suprême",
+        "image": "http://placehold.it/32x32",
+        "quantity": 4,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "France",
+            "region": "Île-de-France"
+        },
+        "calories": {
+            "total": 350,
+            "perServing": 90
+        }
+    },
+    {
+        "name": "Cake tout Chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantity": 3,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "Belgium",
+            "region": "Brussels"
+        },
+        "calories": {
+            "total": 400,
+            "perServing": 110
+        }
+    },
+    {
+        "name": "Cake Framboise chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantity": 4,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "France",
+            "region": "Provence-Alpes-Côte d'Azur"
+        },
+        "calories": {
+            "total": 320,
+            "perServing": 80
+        }
+    },
+    {
+        "name": "Brioche sucrée avec chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantityWon": 0,
+        "quantity": 3,
+        "choice": false,
+        "origin": {
+            "country": "France",
+            "region": "Normandy"
+        },
+        "calories": {
+            "total": 250,
+            "perServing": 70
+        }
+    },
+    {
+        "name": "Cake glacé fondant au chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantity": 2,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "Switzerland",
+            "region": "Zurich"
+        },
+        "calories": {
+            "total": 380,
+            "perServing": 95
+        }
+    },
+    {
+        "name": "Éclairs au chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantity": 5,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "France",
+            "region": "Centre-Val de Loire"
+        },
+        "calories": {
+            "total": 300,
+            "perServing": 75
+        }
+    },
+    {
+        "name": "Tarte poire chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantity": 5,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "France",
+            "region": "Brittany"
+        },
+        "calories": {
+            "total": 420,
+            "perServing": 100
+        }
+    },
+    {
+        "name": "Banana au chocolat",
+        "image": "http://placehold.it/32x32",
+        "quantity": 3,
+        "quantityWon": 0,
+        "choice": false,
+        "origin": {
+            "country": "United States",
+            "region": "California"
+        },
+        "calories": {
+            "total": 280,
+            "perServing": 85
+        }
+    }
+]
+
+

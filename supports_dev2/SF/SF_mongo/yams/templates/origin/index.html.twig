@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello OriginController!{% endblock %}
+
+{% block body %}
+{% for pastry in pastries %}
+    <p>{{pastry.name}} </p>
+{% endfor %}
+{% endblock %}

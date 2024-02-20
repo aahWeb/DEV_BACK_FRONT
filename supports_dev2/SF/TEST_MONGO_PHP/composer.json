@@ -1,0 +1,17 @@
+{
+    "name": "antoinelucsko/sf",
+    "autoload": {
+        "psr-4": {
+            "Antoinelucsko\\Sf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antoine07",
+            "email": "antoine.lucsko@gmail.com"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^1.17"
+    }
+}
