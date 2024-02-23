@@ -18,12 +18,14 @@
 	</style>
 
 	<div class="flex space-x-4 mb-6">
-		<h1>{{result ? result | message : null }}</h1>
-        <ul>
+		<h1>{{ result | message  }}</h1>
+        <p>
+        {% if pastries %}
         {% for pastry in pastries %}
-            <li>{{pastry.name}} - Calory : {{ pastry.calory}}</li>
+            <span>{{ pastry.name}} - Calory : {{ pastry.calory }}</span>
         {% endfor %}
-        </ul>
+        {% endif %}
+        </p>
 		<button class="bg-blue-500 text-white px-4 py-2 rounded" >
 			<a href="{{path('app_game')}}">Rejoué</a>
 		</button>

@@ -19,7 +19,7 @@ class Yams
 
     public function isLargeStraight(array $dices): bool
     {
-        sort($dices);
+        sort($dices); // ordonne par ordre croissant        
         $count = 0;
         $s = [1, 2, 3, 4, 5];
         for ($i = 0; $i < 5; $i++) {

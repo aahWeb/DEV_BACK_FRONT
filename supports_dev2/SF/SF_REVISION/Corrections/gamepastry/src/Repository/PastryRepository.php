@@ -21,16 +21,13 @@ class PastryRepository extends ServiceEntityRepository
         parent::__construct($registry, Pastry::class);
     }
 
-    public function findRandPastries(int $limit)
+    public function findPastries(int $limit)
     {
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT p FROM App\Entity\Pastry p ORDER BY RAND()'
-            )
+        return $this->createQueryBuilder("p")
             ->setMaxResults($limit)
+            ->getQuery()
             ->getResult();
     }
-
     //    /**
     //     * @return Pastry[] Returns an array of Pastry objects
     //     */

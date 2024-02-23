@@ -11,21 +11,19 @@ use Symfony\Component\Routing\Attribute\Route;
 class ResultController extends AbstractController
 {
     #[Route('/result', name: 'app_result')]
-    public function index(PastryRepository $repository, SessionInterface $session): Response
+    public function index(PastryRepository $repository,SessionInterface $session): Response
     {
-        $dices = $session->get('dices');
-        $result = (int) $session->get('result');
-
-        $session->remove('result');
-        $session->remove('dices');
-
-        $pastries = $repository->findRandPastries( $result ?? 0 ) ; 
+       $result = (int) $session->get('result'); // la session le type c'est string
+       $dices = $session->get('dices');
+       $session->remove('result'); // suppression
+       $session->remove('dices'); // suppression
+       $session->remove('counter'); // on supprimer le compteur il n'existe plus
 
         return $this->render('result/index.html.twig', [
             'controller_name' => 'ResultController',
-            'dices' => $dices,
-            'result'=> $result,
-            'pastries' => $pastries
+            'dices' => $dices ??  [], // test si $dices est null si c'est null execute le code alternatif 
+            'result' => $result ?? '',
+            'pastries' =>  $repository->findPastries($result)
         ]);
     }
 }
