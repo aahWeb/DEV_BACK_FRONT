@@ -428,3 +428,5 @@ function convertToRoman(num) {
 Voilà, on a implémenté notre fonction `convertToRoman` en utilisant l'approche TDD, on a écrit un test qui échoue, on a écrit le code le plus simple pour que le test passe, et on a refactorisé le code pour le rendre plus structuré, plus évolutif.
 
 Le but ici n'est pas de vous apprendre à écrire une fonction qui convertit un nombre en chiffre romain, mais de vous montrer l'approche TDD.
+
+Ca peut être un bon exercice à finir, en ajoutant des tests pour les nombres se terminant par 4, 9, 40, 90, 400 et 900, et en refactorisant le code pour que les tests passent.
