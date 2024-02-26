@@ -1,0 +1,19 @@
+{
+  "name": "roman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convertToRoman.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "babel-jest": "^29.7.0"
+  }
+}
