@@ -21,7 +21,7 @@ La fonction `Person` agit comme un modèle pour créer des objets `Person`. Les 
 
 Lorsque vous utilisez une fonction constructeur et que vous affectez des propriétés à `this`, il est important de faire attention à l'effet de bord. Le mot-clé `this` peut être imprévisible dans certaines situations. Considérez l'exemple suivant :
 
-```javascript
+```js
 function Counter() {
   this.value = 0;
 
@@ -75,5 +75,3 @@ console.log(user1.calculateAverage()); // Affiche la moyenne des notes de Alice
 ```
 
 Dans cet exercice, la méthode `calculateAverage` est ajoutée au prototype de `User`, permettant à toutes les instances de `User` d'y accéder sans duplication de code.
-
-En comprenant ces concepts, vous serez mieux équipé pour travailler avec des objets et des prototypes en JavaScript. N'hésitez pas à pratiquer ces concepts avec des exemples concrets pour renforcer votre compréhension.

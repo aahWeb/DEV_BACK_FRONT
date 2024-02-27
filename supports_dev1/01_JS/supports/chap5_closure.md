@@ -2,7 +2,9 @@
 
 #### Introduction
 
-Les closures sont l'un des concepts fondamentaux en JavaScript, offrant une puissante capacité à gérer l'encapsulation, la persistance des variables, et la création de fonctions dynamiques. Comprendre les closures est essentiel pour écrire un code JavaScript robuste et efficace.
+Les closures sont l'un des concepts fondamentaux en JavaScript, offrant une puissante capacité à gérer l'encapsulation, la persistance des variables, et la création de fonctions dynamiques. 
+
+Comprendre les closures est essentiel pour écrire un code JavaScript robuste et efficace.
 
 #### Définition
 
@@ -12,7 +14,7 @@ Les closures sont l'un des concepts fondamentaux en JavaScript, offrant une puis
 
 #### Création de Closures
 
-```javascript
+```js
 function externe(x) {
   // Fonction interne avec accès à la variable externe
   function interne(y) {
@@ -56,24 +58,26 @@ console.log(counter.get()); // Résultat: 1
 
 Les closures sont souvent utilisées pour créer des fonctions partielles, où certaines valeurs sont pré-définies dans la closure.
 
-```javascript
-function multiplier(x) {
+```js
+function mult(x) {
   return function (y) {
     return x * y;
   };
 }
 
-const double = multiplier(2);
+const double = mult(2);
 console.log(double(5)); // Résultat: 10
 ```
 
-Ici, `multiplier` crée une closure autour de la variable `x`, et la fonction interne retournée agit comme une fonction de multiplication par `x`.
+Ici, `mult` crée une closure autour de la variable `x`, et la fonction interne retournée agit comme une fonction de multiplication par `x`.
 
 #### Gestion de la Mémoire
 
-Les closures ont également un impact sur la gestion de la mémoire. Les variables utilisées dans une closure ne sont pas éligibles à la collecte des déchets tant que la closure existe, car elles sont toujours référencées par la fonction interne.
+Les closures ont également un impact sur la gestion de la mémoire. 
 
-```javascript
+:pill: Les variables utilisées dans une closure ne sont pas éligibles à la collecte des **déchets** (garbage collection, ramasses miettes) tant que la closure existe, car elles sont toujours référencées par la fonction interne.
+
+```js
 function createCounter() {
   let count = 0;
 
@@ -87,10 +91,6 @@ const counter = createCounter();
 counter(); // Résultat: 1
 counter(); // Résultat: 2
 ```
-
-#### Conclusion
-
-:rocket: En résumé, les closures sont une caractéristique puissante de JavaScript qui permet l'encapsulation, la création de fonctions partielles, et a des implications importantes sur la gestion de la mémoire. Comprendre les closures est essentiel pour écrire un code JavaScript efficace et maintenable.
 
 ### Exercices 
 
@@ -106,11 +106,11 @@ console.log(multiplyBy(3)); // Résultat: 15
 console.log(multiplyBy(7)); // Résultat: 35
 ```
 
-###  counter Closure
+### Counter Closure
 
 Créez une fonction `counter` qui renvoie une fonction qui, à chaque appel, incrémente un compteur et renvoie la nouvelle valeur. Utilisez cette fonction pour créer une instance de compteur et testez son comportement.
 
-```javascript
+```js
 const incr = counter();
 console.log(incr()); // Résultat: 1
 console.log(incr()); // Résultat: 2
@@ -120,7 +120,7 @@ console.log(incr()); // Résultat: 2
 
 Créez une fonction `createTaskList` qui renvoie un objet avec deux méthodes : `addTask` pour ajouter une tâche à la liste et `getTasks` pour obtenir la liste des tâches actuelles. Testez votre fonction en ajoutant des tâches et en récupérant la liste.
 
-```javascript
+```js
 const taskList = createTaskList();
 taskList.addTask('Faire les courses');
 taskList.addTask('Répondre aux emails');
@@ -131,7 +131,7 @@ console.log(taskList.getTasks()); // Résultat: ['Faire les courses', 'Répondre
 
 :rocket: Créez une fonction `createCache` qui renvoie une fonction. Cette fonction doit accepter une clé et une fonction de calcul. Si la clé existe dans la cache, retournez la valeur associée. Sinon, calculez la valeur à l'aide de la fonction de calcul, stockez-la dans la cache et retournez-la. Testez votre fonction avec une fonction de calcul simple.
 
-```javascript
+```js
 const calculateSquare = createCache();
 console.log(calculateSquare(5, () => 5 * 5)); // Résultat: 25 (calculé)
 console.log(calculateSquare(5, () => 5 * 5)); // Résultat: 25 (récupéré depuis la cache)

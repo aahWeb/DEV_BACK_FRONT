@@ -2,7 +2,9 @@
 
 ## Introduction
 
-[Vite.js](https://vitejs.dev/) est un outil de développement rapide pour la création d'applications web modernes en JavaScript et TypeScript. Il est conçu pour être simple à utiliser, performant et évolutif. Vite se concentre sur la rapidité en offrant une expérience de développement proche de la production.
+[Vite.js](https://vitejs.dev/) est un outil de développement rapide pour la création d'applications web modernes en JavaScript et TypeScript. 
+
+Il est conçu pour être simple à utiliser, performant et évolutif. Vite se concentre sur la rapidité en offrant une expérience de développement proche de la production.
 
 ### Caractéristiques Principales
 

@@ -1,6 +1,8 @@
 # Scope
 
-La portée des variables en JavaScript fait référence à la visibilité d'une variable dans différentes parties du code. Il existe différents types de portées, notamment la portée globale, la portée locale et la portée de bloc. Comprendre la portée des variables est essentiel pour écrire un code JavaScript robuste et éviter les erreurs.
+La portée des variables en JavaScript fait référence à la visibilité d'une variable dans différentes parties du code. 
+
+:rocket: Il existe différents types de portées, notamment la portée globale, la portée locale et la portée de bloc. Comprendre la portée des variables est essentiel pour écrire un code JavaScript robuste et éviter les erreurs.
 
 ## Portée des variables
 
@@ -23,20 +25,9 @@ baz();
 
 ```
 
-### Exemple de temporal Dead Zone
-
-```js
-function tdz() {
-  console.log(tdz_val);
-
-  let tdz_val = "Temporal Dead Zone";
-}
-
-tdz();
-```
 
 >[!NOTE] 
-> Attention à la portée des variables, dans l'exemple suivant j après la boucle n'est pas définie.
+> Attention à la portée des variables, dans l'exemple suivant `j`, après la boucle n'est pas définie.
 
 ```js
 for (let j = 0; j < 10; j++) {}
@@ -86,9 +77,7 @@ console.log(STUDENTS);
 
 ```
 
-La portée des variables en JavaScript fait référence à la visibilité d'une variable dans différentes parties du code. Il existe différents types de portées, notamment la portée globale, la portée locale et la portée de bloc. Comprendre la portée des variables est essentiel pour écrire un code JavaScript robuste et éviter les erreurs.
-
-## 1. Portée Globale
+## Portée Globale
 
 La portée globale est la portée de niveau supérieur dans un programme JavaScript. Les variables déclarées à ce niveau sont accessibles de partout dans le code.
 
@@ -103,7 +92,7 @@ function afficherGlobalVar() {
 afficherGlobalVar(); // Affiche "Je suis globale"
 ```
 
-## 2. Portée Locale (Fonction)
+## Portée Locale (Fonction)
 
 Les variables déclarées à l'intérieur d'une fonction ont une portée locale. Elles ne sont accessibles qu'à l'intérieur de la fonction où elles sont déclarées.
 
@@ -120,7 +109,7 @@ exemplePorteeLocale(); // Affiche "Je suis locale"
 console.log(localVar); // ReferenceError: localVar is not defined
 ```
 
-## 3. Portée de Bloc (let et const)
+## Portée de Bloc (let et const)
 
 Avec l'introduction de `let` et `const` dans ECMAScript 6 (ES6), JavaScript a introduit la portée de bloc. Les variables déclarées avec `let` et `const` ont une portée limitée au bloc dans lequel elles sont déclarées.
 
@@ -135,7 +124,7 @@ if (true) {
 console.log(blockVar); // ReferenceError: blockVar is not defined
 ```
 
-## 4. Temporal Dead Zone (TDZ)
+## Temporal Dead Zone (TDZ)
 
 La Temporal Dead Zone (TDZ) fait référence à la période entre le début d'une portée (par exemple, le début d'une fonction ou d'un bloc) et la déclaration effective de la variable. Durant cette période, la variable existe, mais toute tentative d'accès à celle-ci provoque une `ReferenceError`.
 
@@ -144,7 +133,7 @@ console.log(tdVar); // ReferenceError: Cannot access 'tdVar' before initializati
 let tdVar = "Je suis dans la Temporal Dead Zone";
 ```
 
-## 5. Utilisation de `var`
+## Utilisation de `var`
 
 Avant l'introduction de `let` et `const`, la déclaration de variables se faisait avec `var`. Les variables déclarées avec `var` ont une portée de fonction et peuvent être sujettes à des comportements inattendus.
 
@@ -163,5 +152,3 @@ console.log(localVar); // Pas d'erreur, affiche "Je suis déclarée avec var"
 ## Conclusion
 
 La compréhension de la portée des variables en JavaScript est essentielle pour écrire un code clair, éviter les erreurs de portée et adopter les meilleures pratiques de programmation. L'utilisation de `let` et `const` permet de mieux contrôler la portée des variables et d'éviter des comportements inattendus.
-
-N'hésitez pas à poser des questions si vous avez besoin de clarifications ou d'informations supplémentaires !

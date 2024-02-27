@@ -1,6 +1,6 @@
-# Cours sur les Fonctions en JavaScript avec Hoisting
+# Les Fonctions en JavaScript
 
-## 1. Fonctions Nomées et Expressions de Fonction
+## Fonctions Nomées et Expressions de Fonction
 
 En JavaScript, les fonctions sont des éléments fondamentaux qui permettent de structurer le code, d'encapsuler la logique, et de créer des blocs réutilisables. Les fonctions peuvent être déclarées de différentes manières, notamment en tant que fonctions nommées et expressions de fonction.
 
@@ -10,13 +10,13 @@ Une fonction nommée est une fonction qui a un nom spécifié lors de sa déclar
 
 ```javascript
 // Déclaration d'une fonction nommée
-function addition(a, b) {
+function add(a, b) {
   return a + b;
 }
 
 // Appel de la fonction nommée
-const resultat = addition(3, 4);
-console.log(resultat); // Affiche 7
+const res = add(3, 4);
+console.log(res); // Affiche 7
 ```
 
 ### Expressions de Fonction
@@ -25,44 +25,46 @@ Une expression de fonction est une fonction qui est assignée à une variable ou
 
 ```javascript
 // Expression de fonction anonyme
-const soustraction = function(a, b) {
+const sub = function(a, b) {
   return a - b;
 };
 
 // Appel de la fonction anonyme
-const resultatSoustraction = soustraction(8, 3);
-console.log(resultatSoustraction); // Affiche 5
+const resSub = sub(8, 3);
+console.log(resSub); // Affiche 5
 
 // Expression de fonction nommée
-const multiplication = function multiplication(a, b) {
+const mult = function mult(a, b) {
   return a * b;
 };
 
 // Appel de la fonction nommée
-const resultatMultiplication = multiplication(2, 6);
-console.log(resultatMultiplication); // Affiche 12
+const resMult = mult(2, 6);
+console.log(resMult); // Affiche 12
 ```
 
-## 2. Fonctions Fléchées
+## Fonctions Fléchées
 
-Les fonctions fléchées sont une syntaxe plus concise et plus moderne introduite dans ECMAScript 6 (ES6). Elles offrent une manière plus concise de déclarer des fonctions et ont des comportements particuliers.
+Les fonctions fléchées sont une syntaxe plus **concise** et plus moderne introduite dans ECMAScript 6 (ES6). 
+
+>[!NOTE] Elles offrent une manière plus concise de déclarer des fonctions et ont des comportements spécifiques.
 
 ### Syntaxe de Base
 
 ```javascript
 // Fonction fléchée pour l'addition
-const addition = (a, b) => a + b;
+const add = (a, b) => a + b;
 
 // Appel de la fonction fléchée
-const resultatAddition = addition(5, 3);
-console.log(resultatAddition); // Affiche 8
+const res = add(5, 3);
+console.log(res); // Affiche 8
 ```
 
-### Utilisation avec un Seul Paramètre
+### Utilisation avec un seul Paramètre
 
-Si la fonction prend un seul paramètre, les parenthèses autour du paramètre peuvent être omises.
+:pill: Si la fonction prend un seul paramètre, les parenthèses autour du paramètre peuvent être omises.
 
-```javascript
+```js
 // Fonction fléchée pour le carré d'un nombre
 const carre = x => x * x;
 
@@ -73,9 +75,11 @@ console.log(resultatCarre); // Affiche 16
 
 ### Utilisation avec `this`
 
-Les fonctions fléchées n'ont pas leur propre `this`. Elles héritent du `this` du contexte dans lequel elles sont définies.
+:rocket: Les fonctions fléchées n'ont pas leur propre `this`. 
 
-```javascript
+Elles héritent du `this` du contexte dans lequel elles sont définies.
+
+```js
 const o = {
   name: "o",
   f: function() {
@@ -110,27 +114,27 @@ School.sayHello(); // undefined
 
 :rocket: Remarque, un autre exemple du comportement des fonctions fléchées est donné plus bas.
 
-## 3. Avantages des Fonctions Fléchées
+## Avantages des Fonctions Fléchées
 
-### Syntaxe Concise
+### Syntaxe concise
 
 Les fonctions fléchées permettent de déclarer des fonctions de manière plus concise, ce qui rend le code plus lisible.
 
 ```javascript
 // Fonction normale
-const additionNormale = function(a, b) {
+const add = function(a, b) {
   return a + b;
 };
 
 // Fonction fléchée
-const additionFlechee = (a, b) => a + b;
+const addArrow = (a, b) => a + b;
 ```
 
 ### `this` Lexical
 
-Les fonctions fléchées héritent du `this` du contexte dans lequel elles sont définies, éliminant ainsi la confusion associée aux fonctions classiques.
+>[!NOTE] Les fonctions fléchées héritent du `this` du contexte dans lequel elles sont définies, éliminant ainsi la confusion associée aux fonctions classiques.
 
-```javascript
+```js
 function A() {
   this.val = 42;
 
@@ -154,9 +158,11 @@ a.f();
 a.g();
 ```
 
-## 4. Hoisting avec les Fonctions
+## Hoisting avec les Fonctions
 
-:pill: Le hoisting est un comportement particulier de JavaScript où les déclarations de variables et de fonctions sont déplacées vers le haut de leur contexte avant l'exécution du code. Cela signifie que vous pouvez appeler une fonction avant de la déclarer dans votre code.
+:pill: Le hoisting est un comportement particulier de JavaScript où les déclarations de variables et de fonctions sont déplacées vers le haut de leur contexte avant l'exécution du code. 
+
+:pill: Cela signifie que vous pouvez appeler une fonction avant de la déclarer dans votre code.
 
 ### Hoisting avec les Fonctions Nomées
 
@@ -172,38 +178,40 @@ function hoistedFunction() {
 
 ### Hoisting avec les Expressions de Fonction
 
-:pill: Le hoisting affecte également les variables contenant des expressions de fonction, mais il ne déplace que la déclaration de la variable, pas l'assignation de la fonction.
+:rocket:
 
-```javascript
+```js
 // Appel de la fonction avant sa déclaration
-// Ceci provoquera une erreur car la variable est hoistée, mais pas la fonction elle-même
-// hoistedFunctionExpression(); // TypeError: hoistedFunctionExpression is not a function
+// Ceci provoquera une erreur car la variable n'est pas accessible avant sa déclaration et non plus la fonction elle-même.
+// g(); // TypeError: g is not a function
 
 // Déclaration de la variable avec une expression de fonction
-const hoistedFunctionExpression = function() {
-  console.log("Je suis une expression de fonction hoistée !");
+const g = function() {
+  console.log("Je suis une expression de fonction !");
 };
 
 // Appel de la fonction après sa déclaration
-hoistedFunctionExpression(); // Affiche "Je suis une expression de fonction hoistée !"
+g(); // Affiche "Je suis une expression de fonction !"
 ```
 
 ### Hoisting avec les Fonctions Fléchées
 
-:pill: Les fonctions fléchées ne sont pas soumises au hoisting de la même manière que les fonctions nommées et les expressions de fonction. Elles ne sont pas hoistées en haut de leur contexte.
+:pill: Les fonctions fléchées ne sont pas soumises au hoisting de la même manière que les fonctions nommées et les expressions de fonction. 
 
-```javascript
+>[!NOTE] Elles ne sont pas hoistées en haut de leur contexte.
+
+```js
 // Appel de la fonction fléchée avant sa déclaration
 // Ceci provoquera une erreur car la variable n'est pas hoistée
-// hoistedArrowFunction(); // TypeError: hoistedArrowFunction is not a function
+// h(); // TypeError: h is not a function
 
 // Déclaration de la variable avec une fonction fléchée
-const hoistedArrowFunction = () => {
+const h = () => {
   console.log("Je ne suis pas hoistée !");
 };
 
 // Appel de la fonction fléchée après sa déclaration
-hoistedArrowFunction(); // Affiche "Je ne suis pas hoistée !"
+h(); // Affiche "Je ne suis pas hoistée !"
 ```
 
 ## Exercice Deep copy
