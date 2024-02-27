@@ -121,7 +121,7 @@ class PastryRepository extends ServiceDocumentRepository
 1. Création d'un contrôleur PastryController pour afficher les données.
 
 ```bash
-php bin/console make:controller PastryController
+php bin/console make:controller RestaurantController
 ```
 
 1. Création d'une entité Pastry ODM qui sera mappée par Doctrine, dans le dossier Document.
